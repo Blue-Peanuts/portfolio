@@ -6,7 +6,7 @@ import AudiotrackIcon from '@mui/icons-material/Audiotrack'
 import PaletteIcon from '@mui/icons-material/Palette'
 import SidebarButton from './SidebarButton';
 
-const Sidebar = () => {
+const Sidebar = (props) => {
     const [open, setOpen] = useState(true);
     const toggleSlider = () => {
         setOpen(!open);
@@ -16,7 +16,7 @@ const Sidebar = () => {
       <Box
         sx={{
           backgroundColor: 'background.main',
-          width: 200,
+          width: 175,
           height: '100vh'
         }}
       >
@@ -27,15 +27,21 @@ const Sidebar = () => {
           alignItems="stretch"
         >
           <SidebarButton>
-            <SportsEsportsIcon />
+            <SportsEsportsIcon sx={{
+                paddingRight: 1.5,
+            }}/>
             <span>Games</span>
           </SidebarButton>
           <SidebarButton>
-            <AudiotrackIcon />
+            <AudiotrackIcon sx={{
+                paddingRight: 1.5,
+            }}/>
             <span>Music</span>
           </SidebarButton>
           <SidebarButton>
-            <PaletteIcon />
+            <PaletteIcon sx={{
+                paddingRight: 1.5,
+            }}/>
             <span>Drawings</span>
           </SidebarButton>
         </Grid>

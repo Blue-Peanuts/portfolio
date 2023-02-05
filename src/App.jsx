@@ -6,14 +6,18 @@ import AudiotrackIcon from '@mui/icons-material/Audiotrack'
 import PaletteIcon from '@mui/icons-material/Palette'
 import SidebarButton from './components/SidebarButton'
 import Sidebar from './components/Sidebar'
+import TableRowsIcon from '@mui/icons-material/TableRows';
+
+const backgroundColor = '#131e2a';
+const textColor = '#ffffff';
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: '#ffffff'
+            main: textColor
         },
         background: {
-            main: "#131e2a"
+            main: backgroundColor
         }
     }
 });
@@ -22,8 +26,33 @@ function App() {
     return (
 
         <ThemeProvider theme={theme}>
+            <div className='App' style={{
+                position: 'fixed',
+                top: 0,
+                left: 0,
+                width: '100vw',
+                height: '100vh',
+                backgroundColor: 'primary.main',
+            }}>
 
-            <Sidebar/>
+                <Box sx={{
+                    position: 'fixed',
+                    width: '100vw',
+                    borderBottom: '1px solid #ffffff',
+                    display: 'flex',
+                    alignItems: 'center',
+                }}>
+                    <Button sx={{
+                        height: '50px',
+                    }}>
+                        <TableRowsIcon />
+                    </Button>
+                    <span>
+                        Blue Peanuts
+                    </span>
+                </Box>
+                <Sidebar />
+            </div>
         </ThemeProvider>
     )
 }
