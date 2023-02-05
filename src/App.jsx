@@ -7,8 +7,10 @@ import PaletteIcon from '@mui/icons-material/Palette'
 import SidebarButton from './components/SidebarButton'
 import Sidebar from './components/Sidebar'
 import TableRowsIcon from '@mui/icons-material/TableRows';
+import Topbar from './components/Topbar'
 
-const backgroundColor = '#131e2a';
+const bgColor = '#0B0C10';
+export const accentColor = '#1F2833';
 const textColor = '#ffffff';
 
 
@@ -18,13 +20,13 @@ const theme = createTheme({
             main: textColor
         },
         background: {
-            main: backgroundColor
+            main: bgColor
         }
     }
 });
 
 function App() {
-    const [open, setOpen] = useState(true);
+    const [open, setOpen] = useState(false);
     const toggleSlider = () => {
         setOpen(!open);
     };
@@ -37,27 +39,9 @@ function App() {
                 left: 0,
                 width: '100vw',
                 height: '100vh',
-                backgroundColor: 'primary.main',
+                backgroundColor: bgColor
             }}>
-
-                <Box sx={{
-                    position: 'fixed',
-                    width: '100vw',
-                    borderBottom: '1px solid #ffffff',
-                    display: 'flex',
-                    alignItems: 'center',
-                }}>
-                    <Button sx={{
-                        height: '50px',
-                    }}
-                        onClick={toggleSlider}
-                    >
-                        <TableRowsIcon />
-                    </Button>
-                    <span>
-                        Blue Peanuts
-                    </span>
-                </Box>
+                <Topbar toggleSlider={toggleSlider} />
                 <Sidebar open={open} toggleSlider={toggleSlider} />
             </div>
         </ThemeProvider>

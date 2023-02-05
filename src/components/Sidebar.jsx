@@ -7,7 +7,7 @@ import PaletteIcon from '@mui/icons-material/Palette'
 import SidebarButton from './SidebarButton';
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import CloseIcon from '@mui/icons-material/Close';
-
+import { accentColor } from '../App';
 const Sidebar = ({ open, toggleSlider }) => {
     return (
         <Drawer open={open} anchor="left" onClose={toggleSlider}>
@@ -15,7 +15,7 @@ const Sidebar = ({ open, toggleSlider }) => {
                 sx={{
                     backgroundColor: 'background.main',
                     width: 175,
-                    height: '100vh'
+                    height: '100vh',
                 }}
             >
                 <Grid
@@ -30,7 +30,7 @@ const Sidebar = ({ open, toggleSlider }) => {
                             height: '37.5px',
                         }} />
                     </Button>
-                    <Divider color='#ffffff' />
+                    <Divider color={accentColor} />
                     <SidebarButton>
                         <SportsEsportsIcon sx={{
                             paddingRight: 1.5,
