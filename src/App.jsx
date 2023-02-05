@@ -11,6 +11,7 @@ import TableRowsIcon from '@mui/icons-material/TableRows';
 const backgroundColor = '#131e2a';
 const textColor = '#ffffff';
 
+
 const theme = createTheme({
     palette: {
         primary: {
@@ -23,6 +24,10 @@ const theme = createTheme({
 });
 
 function App() {
+    const [open, setOpen] = useState(true);
+    const toggleSlider = () => {
+        setOpen(!open);
+    };
     return (
 
         <ThemeProvider theme={theme}>
@@ -44,14 +49,16 @@ function App() {
                 }}>
                     <Button sx={{
                         height: '50px',
-                    }}>
+                    }}
+                        onClick={toggleSlider}
+                    >
                         <TableRowsIcon />
                     </Button>
                     <span>
                         Blue Peanuts
                     </span>
                 </Box>
-                <Sidebar />
+                <Sidebar open={open} toggleSlider={toggleSlider} />
             </div>
         </ThemeProvider>
     )
