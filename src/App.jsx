@@ -53,12 +53,36 @@ function App() {
                     alignItems: 'center',
                     flexDirection: 'column',
                 }}>
-                    <Avatar sx={{
-                        marginTop: '50px',
-                        width: '500px',
-                        height: '500px',
-                    }}
-                     alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
+                    <Box sx={{
+
+                            marginTop: '50px',
+                            display: 'flex',
+                            flexdirection: 'row',
+                            justifyContent: 'space-evenly',
+                            width: '100%',
+                    }}>
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            alignContent:'right',
+                            justifyContent: 'right',
+                        }}>
+                            <Box sx={{
+                                fontSize: '120px',
+                                textAlign: 'right',
+                            }}>NITANON</Box>
+                            <Box sx={{
+                                fontSize: '50px',
+                                textAlign: 'right',
+                            }}>RACHAPRADIT</Box>
+
+                        </Box>
+                        <Avatar sx={{
+                            width: '250px',
+                            height: '250px',
+                        }}
+                        alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
+                    </Box>
                 </Box>
                 <Sidebar open={open} toggleSlider={toggleSlider} />
             </div>
