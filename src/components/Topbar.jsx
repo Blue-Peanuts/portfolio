@@ -24,7 +24,9 @@ function Topbar({toggleSlider}) {
         >
             <TableRowsIcon />
         </Button>
-        <span>
+        <span style={{
+            marginTop: '4px',
+        }}>
             Blue Peanuts
         </span>
     </Box>

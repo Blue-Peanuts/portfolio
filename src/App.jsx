@@ -50,36 +50,43 @@ function App() {
                     height: '100vh',
                     backgroundColor: 'background.main',
                     display: 'flex',
-                    alignItems: 'center',
                     flexDirection: 'column',
                 }}>
                     <Box sx={{
-
                             marginTop: '50px',
                             display: 'flex',
                             flexdirection: 'row',
-                            justifyContent: 'space-evenly',
+                            justifyContent: 'center',
+                            alignItems: 'center',
                             width: '100%',
                     }}>
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            alignContent:'right',
                             justifyContent: 'right',
+                            marginTop: '-30px',
                         }}>
                             <Box sx={{
                                 fontSize: '120px',
-                                textAlign: 'right',
+                                textAlign: 'left',
                             }}>NITANON</Box>
                             <Box sx={{
+                                width: '105%',
+                                marginLeft: '-10px',
+                                backgroundColor: 'primary.main',
+                                height: '2px',
+                                marginTop: '-30px',
+                            }}/>
+                            <Box sx={{
                                 fontSize: '50px',
-                                textAlign: 'right',
+                                textAlign: 'left',
                             }}>RACHAPRADIT</Box>
 
                         </Box>
                         <Avatar sx={{
-                            width: '250px',
-                            height: '250px',
+                            width: '200px',
+                            height: '200px',
+                            marginLeft: '120px',
                         }}
                         alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
                     </Box>
