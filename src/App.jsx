@@ -10,14 +10,25 @@ import TableRowsIcon from '@mui/icons-material/TableRows';
 import Topbar from './components/Topbar'
 
 const bgColor = '#0B0C10';
+const averageColor = '#2F3944';
 export const accentColor = '#1F2833';
 const textColor = '#ffffff';
+
+// make textColor a bit closer to accentColor
+
+
+
+
+// pick the average color between accentColor and white
+// const averageColor = '#1F2833';
+
 
 
 const theme = createTheme({
     palette: {
         primary: {
-            main: textColor
+            main: textColor,
+            accent: averageColor
         },
         background: {
             main: bgColor,
@@ -43,6 +54,7 @@ function App() {
                 backgroundColor: 'black'
             }}>
                 <Topbar toggleSlider={toggleSlider} />
+                {/*This is the main content*/}
                 <Box sx={{
                     margin: 'auto',
                     marginTop: '50px',
@@ -51,15 +63,18 @@ function App() {
                     backgroundColor: 'background.main',
                     display: 'flex',
                     flexDirection: 'column',
+                    alignItems: 'center',
                 }}>
+                    {/*This is the profile picture and name*/}
                     <Box sx={{
-                            marginTop: '50px',
-                            display: 'flex',
-                            flexdirection: 'row',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            width: '100%',
+                        marginTop: '50px',
+                        display: 'flex',
+                        flexdirection: 'row',
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: '100%',
                     }}>
+                        {/*This is the name and title*/}
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
@@ -76,21 +91,50 @@ function App() {
                                 backgroundColor: 'primary.main',
                                 height: '2px',
                                 marginTop: '-30px',
-                            }}/>
+                            }} />
                             <Box sx={{
                                 fontSize: '50px',
                                 textAlign: 'left',
                             }}>RACHAPRADIT</Box>
 
                         </Box>
-                        <Avatar sx={{
-                            width: '200px',
-                            height: '200px',
-                            marginLeft: '120px',
-                        }}
-                        alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
+                        <Box sx={{
+                            display: 'flex',
+                            flexDirection: 'column',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            marginLeft: '60px',
+                            marginTop: '30px',
+                        }}>
+                            {/*This is the avatar outer border */}
+                            <Box sx={{
+                                backgroundColor: 'primary.main',
+                                borderRadius: '50%',
+                                border: '4px solid',
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                            }}>
+                                <Avatar sx={{
+                                    width: '200px',
+                                    height: '200px',
+                                    border: '20px solid',
+                                    borderColor: 'background.main',
+                                }}
+                                    alt="Nitanon Rachapradit" src="./src/assets/profile.jpg"/>
+                            </Box>
+                            <Box sx={{
+                                textAlign: 'center',
+                                marginTop: '20px',
+                                fontSize: '16px',
+                                color: 'primary.main',
+                            }}>
+                                Also known as "Blue Peanuts"
+                            </Box>
+                        </Box>
                     </Box>
                 </Box>
+
                 <Sidebar open={open} toggleSlider={toggleSlider} />
             </div>
         </ThemeProvider>

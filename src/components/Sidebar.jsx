@@ -30,7 +30,7 @@ const Sidebar = ({ open, toggleSlider }) => {
                             height: '37.5px',
                         }} />
                     </Button>
-                    <Divider color={accentColor} />
+                    <Divider  color={accentColor} />
                     <SidebarButton>
                         <SportsEsportsIcon sx={{
                             paddingRight: 1.5,

@@ -19,6 +19,7 @@ function Topbar({toggleSlider}) {
     }}>
         <Button sx={{
             height: '50px',
+            color: 'primary.main',
         }}
             onClick={toggleSlider}
         >
