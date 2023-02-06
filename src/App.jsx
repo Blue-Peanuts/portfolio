@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Button, createTheme, ThemeProvider, Drawer, Grid, Box } from '@mui/material'
+import { Avatar, Button, createTheme, ThemeProvider, Drawer, Grid, Box } from '@mui/material'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import AudiotrackIcon from '@mui/icons-material/Audiotrack'
 import PaletteIcon from '@mui/icons-material/Palette'
@@ -20,7 +20,8 @@ const theme = createTheme({
             main: textColor
         },
         background: {
-            main: bgColor
+            main: bgColor,
+            accent: accentColor
         }
     }
 });
@@ -39,9 +40,26 @@ function App() {
                 left: 0,
                 width: '100vw',
                 height: '100vh',
-                backgroundColor: bgColor
+                backgroundColor: 'black'
             }}>
                 <Topbar toggleSlider={toggleSlider} />
+                <Box sx={{
+                    margin: 'auto',
+                    marginTop: '50px',
+                    width: '100%',
+                    height: '100vh',
+                    backgroundColor: 'background.main',
+                    display: 'flex',
+                    alignItems: 'center',
+                    flexDirection: 'column',
+                }}>
+                    <Avatar sx={{
+                        marginTop: '50px',
+                        width: '500px',
+                        height: '500px',
+                    }}
+                     alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
+                </Box>
                 <Sidebar open={open} toggleSlider={toggleSlider} />
             </div>
         </ThemeProvider>

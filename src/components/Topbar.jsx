@@ -12,7 +12,8 @@ function Topbar({toggleSlider}) {
         position: 'fixed',
         width: '100vw',
         borderBottom: '2px solid',
-        borderBottomColor: accentColor,
+        borderBottomColor: 'background.accent',
+        backgroundColor: 'background.main',
         display: 'flex',
         alignItems: 'center',
     }}>
