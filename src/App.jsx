@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import './App.css'
-import { Avatar, Button, createTheme, ThemeProvider, Drawer, Grid, Box } from '@mui/material'
+import { Slide, Grow, Fade, Avatar, Button, createTheme, ThemeProvider, Drawer, Grid, Box, Collapse } from '@mui/material'
 import SportsEsportsIcon from '@mui/icons-material/SportsEsports'
 import AudiotrackIcon from '@mui/icons-material/Audiotrack'
 import PaletteIcon from '@mui/icons-material/Palette'
@@ -78,24 +78,35 @@ function App() {
                         <Box sx={{
                             display: 'flex',
                             flexDirection: 'column',
-                            justifyContent: 'right',
+                            justifyContent: 'center',
+                            alignItems: 'left',
                             marginTop: '-30px',
                         }}>
-                            <Box sx={{
-                                fontSize: '120px',
-                                textAlign: 'left',
-                            }}>NITANON</Box>
-                            <Box sx={{
-                                width: '105%',
-                                marginLeft: '-10px',
-                                backgroundColor: 'primary.main',
-                                height: '2px',
-                                marginTop: '-30px',
-                            }} />
-                            <Box sx={{
-                                fontSize: '50px',
-                                textAlign: 'left',
-                            }}>RACHAPRADIT</Box>
+                            <Fade timeout={2000} in={true}>
+                                <Box sx={{
+                                    fontSize: '120px',
+                                    textAlign: 'left',
+                                }}>NITANON</Box>
+                            </Fade>
+                            <Fade in={true} timeout={600}>
+                                <div>
+                                    <Slide direction='right' in={true} timeout={600}>
+                                        <Box sx={{
+                                            width: '110%',
+                                            marginLeft: '-20px',
+                                            backgroundColor: 'primary.main',
+                                            height: '4px',
+                                            marginTop: '-30px',
+                                        }} />
+                                    </Slide></div>
+                            </Fade>
+                            <Fade timeout={1500} in={true}>
+                                <Box sx={{
+                                    fontSize: '50px',
+                                    textAlign: 'left',
+                                    marginTop: '-30px',
+                                }}>RACHAPRADIT</Box>
+                            </Fade>
 
                         </Box>
                         <Box sx={{
@@ -106,30 +117,42 @@ function App() {
                             marginLeft: '60px',
                             marginTop: '30px',
                         }}>
+                            <Fade in={true} timeout={2000}>
+                                <Box sx={{
+                                    backgroundColor: 'primary.main',
+                                    borderRadius: '50%',
+                                    border: '4px solid',
+                                    display: 'flex',
+                                    justifyContent: 'center',
+                                    alignItems: 'center',
+                                }}>
+                                    <Grow in={true} timeout={1200}>
+                                        <Avatar sx={{
+                                            width: '200px',
+                                            height: '200px',
+                                            border: '20px solid',
+                                            borderColor: 'background.main',
+                                        }}
+                                            alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
+
+                                    </Grow>
+                                </Box>
+                            </Fade>
                             {/*This is the avatar outer border */}
-                            <Box sx={{
-                                backgroundColor: 'primary.main',
-                                borderRadius: '50%',
-                                border: '4px solid',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
-                            }}>
-                                <Avatar sx={{
-                                    width: '200px',
-                                    height: '200px',
-                                    border: '20px solid',
-                                    borderColor: 'background.main',
-                                }}
-                                    alt="Nitanon Rachapradit" src="./src/assets/profile.jpg"/>
-                            </Box>
+
                             <Box sx={{
                                 textAlign: 'center',
                                 marginTop: '20px',
                                 fontSize: '16px',
                                 color: 'primary.main',
                             }}>
-                                Also known as "Blue Peanuts"
+                                <Fade in={true} timeout={2000}>
+                                    <div>
+                                        Also known as "Blue Peanuts"
+
+                                    </div>
+
+                                </Fade>
                             </Box>
                         </Box>
                     </Box>
