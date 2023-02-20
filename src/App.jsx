@@ -8,6 +8,7 @@ import SidebarButton from './components/SidebarButton'
 import Sidebar from './components/Sidebar'
 import TableRowsIcon from '@mui/icons-material/TableRows';
 import Topbar from './components/Topbar'
+import Profile from './components/Profile'
 
 const bgColor = '#0B0C10';
 const averageColor = '#2F3944';
@@ -65,97 +66,7 @@ function App() {
                     flexDirection: 'column',
                     alignItems: 'center',
                 }}>
-                    {/*This is the profile picture and name*/}
-                    <Box sx={{
-                        marginTop: '50px',
-                        display: 'flex',
-                        flexdirection: 'row',
-                        justifyContent: 'center',
-                        alignItems: 'center',
-                        width: '100%',
-                    }}>
-                        {/*This is the name and title*/}
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'left',
-                            marginTop: '-30px',
-                        }}>
-                            <Fade timeout={2000} in={true}>
-                                <Box sx={{
-                                    fontSize: '120px',
-                                    textAlign: 'left',
-                                }}>NITANON</Box>
-                            </Fade>
-                            <Fade in={true} timeout={600}>
-                                <div>
-                                    <Slide direction='right' in={true} timeout={600}>
-                                        <Box sx={{
-                                            width: '110%',
-                                            marginLeft: '-20px',
-                                            backgroundColor: 'primary.main',
-                                            height: '4px',
-                                            marginTop: '-30px',
-                                        }} />
-                                    </Slide></div>
-                            </Fade>
-                            <Fade timeout={1500} in={true}>
-                                <Box sx={{
-                                    fontSize: '50px',
-                                    textAlign: 'left',
-                                    marginTop: '-30px',
-                                }}>RACHAPRADIT</Box>
-                            </Fade>
-
-                        </Box>
-                        <Box sx={{
-                            display: 'flex',
-                            flexDirection: 'column',
-                            justifyContent: 'center',
-                            alignItems: 'center',
-                            marginLeft: '60px',
-                            marginTop: '30px',
-                        }}>
-                            <Fade in={true} timeout={2000}>
-                                <Box sx={{
-                                    backgroundColor: 'primary.main',
-                                    borderRadius: '50%',
-                                    border: '4px solid',
-                                    display: 'flex',
-                                    justifyContent: 'center',
-                                    alignItems: 'center',
-                                }}>
-                                    <Grow in={true} timeout={1200}>
-                                        <Avatar sx={{
-                                            width: '200px',
-                                            height: '200px',
-                                            border: '20px solid',
-                                            borderColor: 'background.main',
-                                        }}
-                                            alt="Nitanon Rachapradit" src="./src/assets/profile.jpg" />
-
-                                    </Grow>
-                                </Box>
-                            </Fade>
-                            {/*This is the avatar outer border */}
-
-                            <Box sx={{
-                                textAlign: 'center',
-                                marginTop: '20px',
-                                fontSize: '16px',
-                                color: 'primary.main',
-                            }}>
-                                <Fade in={true} timeout={2000}>
-                                    <div>
-                                        Also known as "Blue Peanuts"
-
-                                    </div>
-
-                                </Fade>
-                            </Box>
-                        </Box>
-                    </Box>
+                    <Profile/>
                 </Box>
 
                 <Sidebar open={open} toggleSlider={toggleSlider} />
