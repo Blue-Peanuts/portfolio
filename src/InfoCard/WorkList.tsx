@@ -9,16 +9,16 @@ function WorkList() {
         </ScrollAnimation>
         <div className=' pt-4 flex flex-col gap-3'>
             <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-1' fit={true}>
-                <WorkButton text='Video Games' color='red' />
+                <WorkButton text='Video Games' color='border-red-500 text-red-100 hover:bg-red-500' />
             </ScrollAnimation>
             <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-2' fit={true}>
-                <WorkButton text='Apps and Tools' color='emerald' />
+                <WorkButton text='Apps and Tools' color='border-emerald-500 text-emerald-100 hover:bg-emerald-500' />
             </ScrollAnimation>
             <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-3' fit={true}>
-                <WorkButton text='Music' color='indigo' />
+                <WorkButton text='Music' color='border-indigo-500 text-indigo-100 hover:bg-indigo-500' />
             </ScrollAnimation>
             <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
-                <WorkButton text='Illustrations' color='fuchsia' />
+                <WorkButton text='Illustrations' color='border-fuchsia-500 text-fuchsia-100 hover:bg-fuchsia-500' />
             </ScrollAnimation>
         </div>
     </div>
@@ -26,14 +26,18 @@ function WorkList() {
 
 function WorkButton(props: { text: string, color: string}) {
 
-    return <button className={` 
-    border-${props.color}-500 text-${props.color}-100 font-bold text-sm w-fit rounded-tl-full rounded-br-full border-4 lg:border-8
-    hover:bg-${props.color}-500`}>
-        <div className={` ml-5 sm:mr-36 mr-16
+    return <button className={`${props.color} font-bold text-sm w-fit border-4 lg:border-8
+    hover:text-slate-950
+     rounded-tl-[50px] rounded-br-[50px] rounded-tr-xl rounded-bl-xl 
+
+     hover:rounded-tl-3xl hover:rounded-br-3xl hover:rounded-tr-xl hover:rounded-bl-xl transition-all duration-100 ease-in-out
+     hover:font-extrabold hover:pr-20 pr-16 animate-pulse
+    `}>
+        <div className={` ml-5 
+
                                 pt-0.5 pb-1
                         text-sm 
                         sm:text-2xl
-
                         `}>
             <span className='pr-4'></span>
             {props.text}

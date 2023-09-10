@@ -1,6 +1,6 @@
 import bluePicture from '../assets/bluenuts.png';
 function BluePicture() {
-    return <div className=' w-fit -rotate-6'>
+    return <div className=' w-fit -rotate-6 animate-bounce'>
 
         <div className=' 
         w-24 rounded-2xl border-4
