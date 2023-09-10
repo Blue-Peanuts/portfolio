@@ -11,8 +11,7 @@ function IntroductionText() {
                 '>
                     <div className=' whitespace-nowrap
                         text-xl font-bold
-                        sm:text-2xl sm:font-bold
-                        lg:text-4xl md:font-bold
+                        sm:text-4xl md:font-bold
                     '>
                         NITANON RACAHAPRADIT
                     </div>
@@ -23,7 +22,7 @@ function IntroductionText() {
                 <div className=' flex flex-row '>
                     <div className=' flex-grow h-1 bg-white mt-2 mr-2'/>
                     <div className=' text-sm font-bold
-                        lg:text-xl
+                        sm:text-xl
                     '>
                         BLUE PEANUTS
                     </div>
