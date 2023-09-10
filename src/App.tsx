@@ -6,7 +6,13 @@ function App() {
     return (
         <>
             <div className=' text-white'>
-                <InfoCard />
+                    <InfoCard />
+                <div className=' pt-96'></div>
+                <div className=' pt-96'></div>
+                <div className=' pt-96'></div>
+                <div className=' pt-96'></div>
+                <div className=' pt-96'></div>
+                <div className=' pt-96'></div>
             </div>
         </>
     )

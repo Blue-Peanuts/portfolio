@@ -1,13 +1,25 @@
+import ScrollAnimation from "../Animations/ScrollAnimation";
+
 function WorkList() {
     return <div>
-        <div className=' text-xs sm:text-lg mb-2'>
-            I make...
-        </div>
+        <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal' fit={true}>
+            <div className=' text-xs sm:text-lg mb-2'>
+                I make...
+            </div>
+        </ScrollAnimation>
         <div className=' pt-4 flex flex-col gap-3'>
-            <WorkButton text='Video Games' className='bg-red-500 ' />
-            <WorkButton text='Apps and Tools' className='bg-green-500 ' />
-            <WorkButton text='Music' className='bg-cyan-500 ' />
-            <WorkButton text='Illustrations' className='bg-fuchsia-500 ' />
+            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-1' fit={true}>
+                <WorkButton text='Video Games' className='bg-red-500 ' />
+            </ScrollAnimation>
+            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-2' fit={true}>
+                <WorkButton text='Apps and Tools' className='bg-green-500 ' />
+            </ScrollAnimation>
+            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-3' fit={true}>
+                <WorkButton text='Music' className='bg-cyan-500 ' />
+            </ScrollAnimation>
+            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
+                <WorkButton text='Illustrations' className='bg-fuchsia-500 ' />
+            </ScrollAnimation>
         </div>
     </div>
 }
