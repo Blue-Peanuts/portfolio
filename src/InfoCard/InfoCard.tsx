@@ -4,10 +4,14 @@ import WorkList from "./WorkList";
 
 function InfoCard() {
     return (
-        <div className=' w-fit sm:w-1/2'>
+        <div className=' w-fit sm:w-1/2 flex 
+            flex-row gap-24 justify-between align-middle
+            '>
             <ProfilePicture/>
-            <IntroductionText/>
-            <WorkList/>
+            <div>
+                <IntroductionText/>
+                <WorkList/>
+            </div>
         </div>
     );
 }
