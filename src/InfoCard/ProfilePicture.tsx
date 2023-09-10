@@ -1,10 +1,18 @@
 import profilePicture from '../assets/profile.jpg';
 function ProfilePicture() {
     return <div>
-        <div className=' w-5/12 aspect-square flex justify-center items-center border-8 rounded-3xl border-sky-500 rotate-12'>
-            <div className=' w-10/12 aspect-square flex justify-center items-center border-8 rounded-3xl border-orange-500 rotate-12'>
-                <div className = '-rotate-12 w-fit h-fit flex justify-center items-center'>
-                    <img src={profilePicture} className=" m-1 w-11/12 aspect-square object-cover rounded-full -rotate-12" alt="" />
+        <div className=' 
+        w-56 rounded-2xl border-4
+        md:w-80 sm:rounded-3xl sm:border-8 
+        lg:w-96 lg:rounded-3xl lg:border-8
+        aspect-square flex justify-center items-center border-sky-500 rotate-12
+        '>
+            <div className=' 
+            w-10/12 border-4 rounded-2xl
+            sm:w-10/12 sm:border-8 sm:rounded-3xl
+            aspect-square flex justify-center items-center border-orange-500 rotate-12'>
+                <div className = '-rotate-12 w-full h-full flex justify-center items-center'>
+                    <img src={profilePicture} className=" w-11/12 aspect-square object-cover rounded-full -rotate-12" alt="" />
                 </div>
             </div>
         </div>
