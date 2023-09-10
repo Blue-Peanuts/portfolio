@@ -5,7 +5,8 @@ import WorkList from "./WorkList";
 function InfoCard() {
     return (
         <div className=' w-fit sm:w-1/2 flex 
-            flex-row gap-24 justify-between align-middle
+            flex-col gap-12 justify-between align
+            lg:flex-row lg:gap-24
             '>
             <ProfilePicture/>
             <div>
