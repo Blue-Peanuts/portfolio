@@ -4,7 +4,7 @@ import WorkList from "./WorkList";
 
 function InfoCard() {
     return (
-        <div>
+        <div className=' w-1/2'>
             <ProfilePicture/>
             <IntroductionText/>
             <WorkList/>
