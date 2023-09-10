@@ -5,21 +5,21 @@ import WorkList from "./WorkList";
 
 function InfoCard() {
     return (
-        <div className=' w-screen flex justify-center items-start'>
+        <div className=' w-screen flex justify-center items-start pb-20'>
             <div className=' w-fit flex
             flex-col gap-12 justify-between 
             items-center
             xl:flex-row xl:gap-32 xl:items-end pt-20
             
             '>
-                <div className='w-fit pb-12'>
+                <div className='w-fit lg:pb-12'>
                     <ProfilePicture />
                 </div>
                 <div className=' flex flex-col justify-start items-start gap-8'>
                     <IntroductionText />
-                    <div className='flex flex-row items-end gap-16'>
+                    <div className='flex flex-row items-end justify-between w-full pl-3 pr-3 sm:pl-0 sm:pr-0'>
                         <WorkList />
-                        <div className='w-fit h-full -mb-7'>
+                        <div className='w-fit h-full mb-0 lg:-mb-7 pl-8'>
                             <BluePicture />
                         </div>
                     </div>

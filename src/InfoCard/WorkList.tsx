@@ -15,7 +15,7 @@ function WorkList() {
 function WorkButton(props: { text: string, className: string }) {
 
     return <button className={` ${props.className} font-bold text-sm w-fit rounded-tl-full rounded-br-full`}>
-        <div className=' ml-5 mr-36
+        <div className=' ml-5 sm:mr-36 mr-16
                                 pt-0.5 pb-1
                         text-sm 
                         sm:text-3xl'>
