@@ -5,14 +5,9 @@ function App() {
 
     return (
         <>
-            <div className=' text-white'>
-                    <InfoCard />
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
+            <div className=' pt-0 xl:pt-16 2xl:pt-24'></div>
+            <div className=' text-white scale-75 sm:scale-100'>
+                <InfoCard />
             </div>
         </>
     )

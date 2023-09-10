@@ -11,11 +11,10 @@ function InfoCard() {
             flex-col gap-12 justify-between 
             items-center
             xl:flex-row xl:gap-32 xl:items-end pt-20
-            
             '>
                 <div className='w-fit lg:pb-12'>
-                            <ScrollAnimation initial='opacity-none' onIntersection='animate-rotate-reveal-delay-1' fit={true}>
-                    <ProfilePicture />
+                    <ScrollAnimation initial='opacity-none' onIntersection='animate-rotate-reveal-delay-1' fit={true}>
+                        <ProfilePicture />
                     </ScrollAnimation>
                 </div>
                 <div className=' flex flex-col justify-start items-start gap-8'>
