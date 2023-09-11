@@ -2,7 +2,7 @@ import ScrollAnimation from "../Animations/ScrollAnimation";
 
 function WorkList() {
     return <div>
-        <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal' fit={true}>
+        <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
             <div className=' text-xs sm:text-lg mb-2'>
                 I make...
             </div>
@@ -24,14 +24,14 @@ function WorkList() {
     </div>
 }
 
-function WorkButton(props: { text: string, color: string}) {
+function WorkButton(props: { text: string, color: string }) {
 
     return <button className={`${props.color} font-bold text-sm w-fit border-4 lg:border-8
     hover:text-slate-950
      rounded-tl-[50px] rounded-br-[50px] rounded-tr-xl rounded-bl-xl 
 
      hover:rounded-tl-3xl hover:rounded-br-3xl hover:rounded-tr-xl hover:rounded-bl-xl transition-all duration-100 ease-in-out
-     hover:font-extrabold hover:pr-20 pr-16 animate-pulse
+     hover:font-extrabold hover:pr-20 pr-16 hover:animate-none animate-pulse
     `}>
         <div className={` ml-5 
 

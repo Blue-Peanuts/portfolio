@@ -4,7 +4,7 @@ function IntroductionText() {
     return (
         <div className=' w-fit'>
 
-            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal' fit={true}>
+            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
                 <div className=' text-xs sm:text-lg mb-2'>
                     I am...
                 </div>
@@ -22,7 +22,7 @@ function IntroductionText() {
                             NITANON RACAHAPRADIT
                         </div>
                     </ScrollAnimation>
-                    <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal' fit={true}>
+                    <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
                         <div className=' text-xs sm:text-lg'>
                             aka...
                         </div>

@@ -25,10 +25,8 @@ function ScrollAnimation(props: { initial: string, onIntersection: string, child
         if(!ref.current) return;
 
         if (isIntersecting) {
-            console.log('adding class');
             ref.current.classList.add(props.onIntersection);
         } else {
-            console.log('removing class');
             ref.current.classList.remove(props.onIntersection);
         }
     }, [isIntersecting, props.onIntersection, props.initial]);
