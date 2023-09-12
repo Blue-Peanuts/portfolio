@@ -63,16 +63,19 @@ $reveal-duration: 0.5s;
 
 .work-button-idle {
     animation: pulse 2s infinite;
+    transform-origin: left;
 }
 
 .work-button-others-hovered:not(:hover) {
     animation: pulseSmall 0.3s forwards;
     border-color: #334155 !important;
     color: #334155 !important;
+    transform-origin: left;
 }
 
 .work-button-hovered:hover {
     animation: pulseBig 1s infinite;
+    transform-origin: left;
 }
 
 @keyframes pulseSmall {
