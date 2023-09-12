@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import React from 'react';
-import './Animations.css'
+import './Animations.scss'
 
 
 function ScrollAnimation(props: { initialClass: string, animationClass: string, children: React.ReactNode}) {
@@ -13,8 +13,6 @@ function ScrollAnimation(props: { initialClass: string, animationClass: string, 
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsIntersecting(entry.isIntersecting);
-                console.log(entry.isIntersecting);
-                console.log(props.initialClass + ' ' + (entry.isIntersecting ? props.animationClass : ''));
             },
             {
                 threshold: 0,
@@ -27,7 +25,8 @@ function ScrollAnimation(props: { initialClass: string, animationClass: string, 
     }, []);
     
     return (
-        <div ref={ref} className={props.initialClass + ' ' + (isIntersecting ? props.animationClass : '')}>
+        <div ref={ref} className={  props.initialClass + ' ' +
+                                    (isIntersecting ? props.animationClass : ' ')}>
             {props.children}
         </div>
     );
