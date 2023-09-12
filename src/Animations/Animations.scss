@@ -61,16 +61,46 @@ $reveal-duration: 0.5s;
 }
 
 
-.pulse {
-    animation: pulse 1s infinite;
+.work-button-idle {
+    animation: pulse 2s infinite;
 }
 
+.work-button-others-hovered:not(:hover) {
+    animation: pulseSmall 0.3s forwards;
+    border-color: #334155 !important;
+    color: #334155 !important;
+}
+
+.work-button-hovered:hover {
+    animation: pulseBig 1s infinite;
+}
+
+@keyframes pulseSmall {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0.8);
+    }
+}
+
+@keyframes pulseBig {
+    0% {
+        transform: scale(1.1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
 @keyframes pulse {
     0% {
         transform: scale(1);
     }
     50% {
-        transform: scale(1.1);
+        transform: scale(1.03);
     }
     100% {
         transform: scale(1);
