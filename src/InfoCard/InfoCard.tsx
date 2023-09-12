@@ -3,7 +3,6 @@ import BluePicture from "./BluePicture";
 import IntroductionText from "./IntroductionText";
 import ProfilePicture from "./ProfilePicture";
 import WorkList from "./WorkList";
-import './InfoCard.scss'
 
 function InfoCard() {
     return (
@@ -13,7 +12,7 @@ function InfoCard() {
             xl:flex-row xl:gap-32 xl:items-end
             '>
                 <div className='w-fit lg:pb-12'>
-                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-1'>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-4'>
                         <ProfilePicture />
                     </ScrollAnimation>
                 </div>
@@ -26,7 +25,7 @@ function InfoCard() {
                         <div className='w-fit h-full pl-8
                         mb-0
                         lg:-mb-7 '>
-                            <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-1'>
+                            <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-2'>
                                 <BluePicture />
                             </ScrollAnimation>
                         </div>

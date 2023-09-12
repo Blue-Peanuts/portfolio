@@ -6,7 +6,7 @@ $reveal-buffer: 0.1s;
 $reveal-delay: 0.1s;
 $reveal-duration: 0.5s;
 
-@for $i from 0 through 5 {
+@for $i from 0 through 10 {
     .blur-reveal-#{$i} {
         animation: blurReveal $reveal-duration ease-in-out ($reveal-delay + $reveal-buffer * $i) forwards;
     }

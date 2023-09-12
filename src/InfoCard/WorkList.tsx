@@ -29,24 +29,28 @@ function WorkList() {
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={GamesIcon}
+                animationBuffer = {3}
             />
             <WorkButton text='Apps and Tools' color='border-emerald-500 text-emerald-100 hover:bg-emerald-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={GamesIcon}
+                animationBuffer = {4}
             />
             <WorkButton text='Music' color='border-indigo-500 text-indigo-100 hover:bg-indigo-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={GamesIcon}
+                animationBuffer = {5}
             />
             <WorkButton text='Illustrations' color='border-fuchsia-500 text-fuchsia-100 hover:bg-fuchsia-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={GamesIcon}
+                animationBuffer = {6}
             />
         </div>
     </div>
