@@ -36,7 +36,7 @@ function WorkButton(props: { text: string, color: string, oneIsHovered: boolean,
                     <div className=' mr-4'>
                     {props.text}
                     </div>
-                    {hovered ? <img src={props.svg} className=' h-6 sm:h-12 -m-1 sm:-m-2 pr-2'></img> : <></>}
+                    {hovered ? <img src={props.svg} className=' h-6 sm:h-11 -m-1 sm:-m-1 pr-2'></img> : <></>}
                 </div>
             </div>
         </button>

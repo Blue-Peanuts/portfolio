@@ -6,13 +6,13 @@ import WorkList from "./WorkList";
 
 function InfoCard() {
     return (
-        <div className=' w-screen flex justify-center items-start pb-20'>
+        <div className=' w-screen flex justify-center items-start pb-20]'>
             <div className=' w-fit flex justify-between pt-20
             flex-col gap-12 items-center  
-            xl:flex-row xl:gap-32 xl:items-end
+            xl:flex-row xl:gap-32 xl:items-start
             '>
                 <div className='w-fit lg:pb-12'>
-                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-4'>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-4' className='pt-4'>
                         <ProfilePicture />
                     </ScrollAnimation>
                 </div>

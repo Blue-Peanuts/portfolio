@@ -2,6 +2,9 @@ import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 import TextAnimation from "../TextAnimation";
 
 import { default as GamesIcon } from "../assets/games.svg";
+import { default as AppsIcon } from "../assets/appsandtools.svg";
+import { default as MusicIcon } from "../assets/music.svg";
+import { default as IllustrationsIcon } from "../assets/illustrations.svg";
 
 import { useState } from "react";
 
@@ -18,7 +21,7 @@ function WorkList() {
         setHoverCount(prevHoverCount => prevHoverCount - 1);
     }
 
-    return <div>
+    return <div className=''>
         <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-4'>
             <div className=' text-xs sm:text-lg mb-2'>
                 <p className=' text-slate-500 '>
@@ -40,22 +43,22 @@ function WorkList() {
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
-                svg={GamesIcon}
+                svg={AppsIcon}
                 animationBuffer={4}
             />
             <WorkButton text='Music' color='border-indigo-500 text-indigo-100 hover:bg-indigo-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
                 hoverDecrementCallback={hoverDecrementCallback}
-                svg={GamesIcon}
+                svg={MusicIcon}
                 animationBuffer={5}
             />
             <WorkButton text='Illustrations' color='border-fuchsia-500 text-fuchsia-100 hover:bg-fuchsia-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}
-                hoverDecrementCallback={hoverDecrementCallback}
-                svg={GamesIcon}
-                animationBuffer={6}
+                hoverDecrementCallback={hoverDecrementCallback} 
+                svg={IllustrationsIcon} 
+                animationBuffer={6} 
             />
         </div>
     </div>
