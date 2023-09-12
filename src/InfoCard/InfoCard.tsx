@@ -13,7 +13,7 @@ function InfoCard() {
             xl:flex-row xl:gap-32 xl:items-end pt-20
             '>
                 <div className='w-fit lg:pb-12'>
-                    <ScrollAnimation initial='opacity-none' onIntersection='animate-rotate-reveal-delay-1' fit={true}>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='animate-rotate-reveal-delay-1'>
                         <ProfilePicture />
                     </ScrollAnimation>
                 </div>
@@ -23,7 +23,7 @@ function InfoCard() {
                         <WorkList />
                         <div className='w-fit h-full mb-0 lg:-mb-7 pl-8'>
 
-                            <ScrollAnimation initial='opacity-none' onIntersection='animate-rotate-reveal-delay-1' fit={true}>
+                            <ScrollAnimation initialClass='opacity-none' animationClass='animate-rotate-reveal-delay-1'>
                                 <BluePicture />
                             </ScrollAnimation>
                         </div>

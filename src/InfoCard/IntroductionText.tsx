@@ -4,7 +4,7 @@ function IntroductionText() {
     return (
         <div className=' w-fit'>
 
-            <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
+            <ScrollAnimation initialClass='opacity-none' animationClass='animate-blur-reveal-delay-4' >
                 <div className=' text-xs sm:text-lg mb-2'>
                     I am...
                 </div>
@@ -14,7 +14,7 @@ function IntroductionText() {
                     gap-16
                     
                 '>
-                    <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-long-reveal' fit={true}>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='animate-blur-long-reveal' >
                         <div className=' whitespace-nowrap
                         text-xl font-bold
                         sm:text-4xl md:font-bold
@@ -22,7 +22,7 @@ function IntroductionText() {
                             NITANON RACAHAPRADIT
                         </div>
                     </ScrollAnimation>
-                    <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-reveal-delay-4' fit={true}>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='animate-blur-reveal-delay-4' >
                         <div className=' text-xs sm:text-lg'>
                             aka...
                         </div>
@@ -30,11 +30,11 @@ function IntroductionText() {
                 </div>
                 <div className=' flex flex-row '>
                     <div className=' flex-grow '>
-                        <ScrollAnimation initial='opacity-none' onIntersection='animate-stretch-reveal'>
+                        <ScrollAnimation initialClass='opacity-none' animationClass='animate-stretch-reveal'>
                             <div className='h-1 w-full bg-white mt-2 mr-2' />
                         </ScrollAnimation>
                     </div>
-                    <ScrollAnimation initial='opacity-none' onIntersection='animate-blur-long-reveal' fit={true}>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='animate-blur-long-reveal' >
                         <div className=' text-sm font-bold
                         sm:text-3xl
                     '>

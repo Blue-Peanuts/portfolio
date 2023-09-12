@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
+import React from 'react';
 
-function ScrollAnimation(props: { initial: string, onIntersection: string, children: React.ReactNode, fit?: boolean}) {
+
+function ScrollAnimation(props: { initialClass: string, animationClass: string, children: React.ReactNode}) {
     // if this component is in view, then set the class to onIntersection
     const [isIntersecting, setIsIntersecting] = useState(false);
 
@@ -10,6 +12,8 @@ function ScrollAnimation(props: { initial: string, onIntersection: string, child
         const observer = new IntersectionObserver(
             ([entry]) => {
                 setIsIntersecting(entry.isIntersecting);
+                console.log(entry.isIntersecting);
+                console.log(props.initialClass + ' ' + (entry.isIntersecting ? props.animationClass : ''));
             },
             {
                 threshold: 0,
@@ -20,18 +24,9 @@ function ScrollAnimation(props: { initial: string, onIntersection: string, child
             observer.observe(ref.current);
         }
     }, []);
-
-    useEffect(() => {
-        if(!ref.current) return;
-
-        if (isIntersecting) {
-            ref.current.classList.add(props.onIntersection);
-        } else {
-            ref.current.classList.remove(props.onIntersection);
-        }
-    }, [isIntersecting, props.onIntersection, props.initial]);
+    
     return (
-        <div className={' flex justify-center items-center ' + props.initial + (props.fit? ' w-fit h-fit' : ' w-full h-full ')} ref={ref}>
+        <div ref={ref} className={props.initialClass + ' ' + (isIntersecting ? props.animationClass : '')}>
             {props.children}
         </div>
     );
