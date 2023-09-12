@@ -21,9 +21,11 @@ function WorkList() {
     return <div>
         <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-4'>
             <div className=' text-xs sm:text-lg mb-2'>
-                <TextAnimation texts={[
-                    '_', 'I_,', 'I ma_', 'I make_', 'I make._', 'I make.._', 'I make..._',
-                    'I make..._', 'I make...', 'I make...', 'I make..._', 'I make..._',]} secondsPerFrame={0.2} />
+                <p className=' text-slate-500 '>
+                    <TextAnimation texts={[
+                        '_', 'I_,', 'I ma_', 'I make_', 'I make._', 'I make.._', 'I make..._',
+                        'I make..._', 'I make...', 'I make...', 'I make..._', 'I make..._',]} secondsPerFrame={0.2} />
+                </p>
             </div>
         </ScrollAnimation>
         <div className=' pt-4 flex flex-col gap-3'>
