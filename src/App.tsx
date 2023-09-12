@@ -1,7 +1,7 @@
 import ScrollAnimation from './Animations/ScrollAnimation.tsx'
 import './App.css'
 import InfoCard from './InfoCard/InfoCard.tsx'
-import GamesIcon from './assets/games.svg'
+
 function App() {
 
     return (

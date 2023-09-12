@@ -30,11 +30,6 @@ function ScrollAnimation(props: { initial: string, onIntersection: string, child
             ref.current.classList.remove(props.onIntersection);
         }
     }, [isIntersecting, props.onIntersection, props.initial]);
-    
-
-
-
-
     return (
         <div className={' flex justify-center items-center ' + props.initial + (props.fit? ' w-fit h-fit' : ' w-full h-full ')} ref={ref}>
             {props.children}
