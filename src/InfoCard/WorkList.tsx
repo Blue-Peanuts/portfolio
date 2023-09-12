@@ -26,7 +26,7 @@ function WorkList() {
 
 function WorkButton(props: { text: string, color: string }) {
 
-    return <button className={`${props.color} font-bold text-sm w-fit border-4 lg:border-8
+    return <button className={`${props.color} font-bold text-sm w-fit border-4 lg:border-8 
     hover:text-slate-950
      rounded-tl-[50px] rounded-br-[50px] rounded-tr-xl rounded-bl-xl 
 

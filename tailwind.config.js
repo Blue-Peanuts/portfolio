@@ -9,5 +9,13 @@ export default {
         extend: {},
     },
     plugins: [],
+    // block all animations
+    blocklist: [
+        "animate-spin",
+        "animate-ping",
+        "animate-pulse",
+        "animate-bounce",
+        
+    ]
 }
 
