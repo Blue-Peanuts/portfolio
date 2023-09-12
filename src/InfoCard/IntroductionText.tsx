@@ -9,7 +9,8 @@ function IntroductionText() {
                 <div className=' mb-2 
                 text-xs 
                 sm:text-lg'>
-                    <TextAnimation texts={['_', 'Hi_,', 'Hi, I_', 'Hi, I am_', 'Hi, I am._', 'Hi, I am.._', 'Hi, I am...']} secondsPerFrame={0.2} />
+                    <TextAnimation texts={['_', 'Hi_,', 'Hi, I_', 'Hi, I am_', 'Hi, I am._', 'Hi, I am.._',
+                    'Hi, I am..._', 'Hi, I am..._', 'Hi, I am...', 'Hi, I am...', 'Hi, I am..._', 'Hi, I am..._']} secondsPerFrame={0.2} />
                 </div>
             </ScrollAnimation>
             <div className='flex flex-col gap-2'>
