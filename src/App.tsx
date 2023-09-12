@@ -1,4 +1,4 @@
-import ScrollAnimation from './Animations/ScrollAnimation.tsx'
+import ScrollAnimation from './ScrollAnimation/ScrollAnimation.tsx'
 import './App.css'
 import InfoCard from './InfoCard/InfoCard.tsx'
 
@@ -23,7 +23,7 @@ function App() {
                         lg:pl-16 p-0
                         '>
                                 <div className=' bg-slate-950 aspect-square h-36 rounded-2xl flex items-center justify-center rotate-[15deg]'>
-                                    <ScrollAnimation initialClass='opacity-none' animationClass='animate-rotate-reveal-delay-3'>
+                                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-3'>
                                         <div className=' bg-red-500 aspect-square h-3/4 rounded-2xl -rotate-[5deg]'>
 
                                         </div>

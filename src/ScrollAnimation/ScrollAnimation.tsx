@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import React from 'react';
-import './Animations.scss'
+import './ScrollAnimation.scss';
 
 
 function ScrollAnimation(props: { initialClass: string, animationClass: string, children: React.ReactNode}) {

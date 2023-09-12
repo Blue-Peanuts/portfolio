@@ -1,8 +1,9 @@
-import ScrollAnimation from "../Animations/ScrollAnimation";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 import BluePicture from "./BluePicture";
 import IntroductionText from "./IntroductionText";
 import ProfilePicture from "./ProfilePicture";
 import WorkList from "./WorkList";
+import './InfoCard.scss'
 
 function InfoCard() {
     return (

@@ -1,4 +1,4 @@
-import ScrollAnimation from "../Animations/ScrollAnimation";
+import ScrollAnimation from "../ScrollAnimation/ScrollAnimation";
 
 function IntroductionText() {
     return (
