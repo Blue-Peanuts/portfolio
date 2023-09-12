@@ -11,11 +11,7 @@ function App() {
                 <InfoCard />
             </div>
             <div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
-                <div className=' pt-96'></div>
+                <div className=' pt-[96rem]'></div>
             </div>
             <div>
                 <ScrollAnimation initialClass='opacity-none' animationClass='animate-stretch-reveal'>
