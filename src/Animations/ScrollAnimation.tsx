@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import React from 'react';
+import './Animations.css'
 
 
 function ScrollAnimation(props: { initialClass: string, animationClass: string, children: React.ReactNode}) {
