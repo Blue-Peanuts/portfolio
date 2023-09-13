@@ -51,12 +51,12 @@ function Background() {
 
     return <>
         { windowsWidth > 768 &&
-        <div className=' h-screen w-screen fixed -z-10'>
+        <div className=' absolute -z-10 overflow-hidden h-full w-full'>
             <div style={
                 {
                     top: roundToNearest(mousePos.y + scrollPosition - gridWidth / 2, gridWidth / sections),
                     left: roundToNearest(mousePos.x - gridWidth / 2, gridWidth / sections),
-                    position: 'absolute',
+                    position: 'relative',
                     height: `${gridWidth}px`,
                     gridTemplateRows: `repeat(${sections}, minmax(0, 1fr))`,
                     gridTemplateColumns: `repeat(${sections}, minmax(0, 1fr))`,
@@ -87,7 +87,7 @@ function Background() {
         }
     </>
 }
-function roundToNearest(value, interval) {
+function roundToNearest(value: number, interval: number) {
     return Math.round(value / interval) * interval;
 }
 
