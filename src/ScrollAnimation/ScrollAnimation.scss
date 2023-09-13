@@ -1,0 +1,58 @@
+.opacity-none {
+    opacity: 0;
+}
+
+$reveal-buffer: 0.1s;
+$reveal-delay: 0.1s;
+$reveal-duration: 0.5s;
+
+@for $i from 0 through 10 {
+    .blur-reveal-#{$i} {
+        animation: blurReveal $reveal-duration ease-in-out ($reveal-delay + $reveal-buffer * $i) forwards;
+    }
+    .stretch-reveal-#{$i} {
+        animation: stretchReveal $reveal-duration ease-in-out ($reveal-delay + $reveal-buffer * $i) forwards;
+    }
+    .rotate-reveal-#{$i} {
+        animation: rotateReveal $reveal-duration ease-in-out ($reveal-delay + $reveal-buffer * $i) forwards;
+    }
+}
+
+
+
+@keyframes blurReveal {
+    0% {
+        filter: blur(20px);
+        opacity: 0;
+    }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes stretchReveal {
+    0% {
+        opacity: 0;
+        filter: blur(20px);
+        transform: scale(0);
+    }
+    100% {
+        transform: scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes rotateReveal {
+    0% {
+        transform: rotate(-40deg) scale(0.5);
+        filter: blur(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0deg) scale(1);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
