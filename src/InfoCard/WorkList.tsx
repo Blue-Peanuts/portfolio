@@ -31,7 +31,7 @@ function WorkList() {
                 </p>
             </div>
         </ScrollAnimation>
-        <div className=' pt-4 flex flex-col gap-3'>
+        <div className=' pt-4 flex flex-col gap-3 h-[12rem] sm:h-[15rem]'>
             <WorkButton text='Video Games' color='border-red-500 text-red-100 hover:bg-red-500'
                 oneIsHovered={hoverCount > 0}
                 hoverIncrementCallback={hoverIncrementCallback}

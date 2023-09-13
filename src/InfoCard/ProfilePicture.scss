@@ -1,0 +1,75 @@
+
+
+
+.outer {
+    animation: outerRotate 3s infinite ease-in-out; 
+}
+
+.middle {
+    animation: middleRotate 3s infinite ease-in-out; 
+}
+
+.inner {
+    animation: innerRotate 3s infinite ease-in-out; 
+}
+// counter rotate all parents
+@keyframes innerRotate {
+    0% {
+        transform: rotate(-2deg) scale(1);
+    }
+    25% {
+        transform: rotate(8deg) scale(1.05);
+    }
+
+    50% {
+        transform: rotate(8deg) scale(1.05);
+    }
+    75% {
+        transform: rotate(-2deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(-2deg) scale(1);
+    }
+
+}
+
+@keyframes middleRotate {
+    0% {
+        transform: rotate(-20deg) scale(1);
+    }
+    25% {
+        transform: rotate(-24deg) scale(0.9);
+
+    }
+    50% {
+        transform: rotate(-24deg) scale(0.9);
+    }
+    75% {
+        transform: rotate(-20deg) scale(1);
+    }
+
+    100% {
+        transform: rotate(-20deg) scale(1);
+    }
+}
+
+
+@keyframes outerRotate {
+    0% {
+        transform: rotate(22deg);
+    }
+    25% {
+        transform: rotate(16deg);
+    }
+    50% {
+        transform: rotate(16deg);
+    }
+    75% {
+        transform: rotate(22deg);
+    }
+
+    100% {
+        transform: rotate(22deg);
+    }
+}
