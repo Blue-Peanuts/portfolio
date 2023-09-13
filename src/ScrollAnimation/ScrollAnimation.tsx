@@ -3,7 +3,7 @@ import React from 'react';
 import './ScrollAnimation.scss';
 
 
-function ScrollAnimation(props: { initialClass: string, animationClass: string, children: React.ReactNode, className? : string}) {
+function ScrollAnimation(props: { initialClass: string, animationClass: string, children?: React.ReactNode, className? : string}) {
     // if this component is in view, then set the class to onIntersection
     const [isIntersecting, setIsIntersecting] = useState(false);
 

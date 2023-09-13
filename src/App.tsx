@@ -16,27 +16,37 @@ function App() {
                 <div className=' pt-[96rem]'></div>
             </div>
             <div>
-                <ScrollAnimation initialClass='opacity-none' animationClass='stretch-reveal-0'>
-                    <div className=' bg-red-100 w-full'>
-                        <div className=' flex flex-row justify-normal items-start'>
-                            <div className=' h-24 sm:h-36 
-                        flex flex-col justify-start items-center 
-                        lg:block w-screen lg:w-36 sm:-translate-y-[5.5rem] -translate-y-[3.5rem] 
-                        lg:pl-16 p-0
+            <div className='flex justify-center items-center'>
+                <div className=' max-w-[1500px] '>
+                <div className='flex flex-row justify-center lg:justify-start items-start gap-6 pb-8'>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-0'
+                        className=' bg-red-500 aspect-square rounded-2xl 
+                        lg:h-28 -rotate-[5deg]
+                        h-14 
                         '>
-                                <div className=' bg-slate-950 aspect-square h-36 rounded-2xl flex items-center justify-center rotate-[15deg]'>
-                                    <ScrollAnimation initialClass='opacity-none' animationClass='rotate-reveal-5' className='h-full w-full flex items-center justify-center '>
-                                        <div className=' bg-red-500 aspect-square h-3/4 rounded-2xl -rotate-[5deg]'>
-                                        </div>
-                                    </ScrollAnimation>
-                                </div>
-                            </div>
-                            <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-4' className=' text-red-500 hidden lg:block -translate-y-[2.7rem] pl-20 font-extrabold text-3xl'>
-                                VIDEO GAMES
-                            </ScrollAnimation>
-                        </div>
+                    </ScrollAnimation>
+                    <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-4' className=' text-red-500 font-extrabold text-2xl lg:text-3xl mt-6'>
+                        VIDEO GAMES
+                    </ScrollAnimation>
+                </div>
+                <div className=' flex justify-center'>
+                    <div className=' border-t-slate-800 border-b-slate-800  w-full 
+                     border-b-4  border-t-4 
+                     
+                     lg:-mt-16
+                    
+                    pt-12 lg:ml-40 lg:mr-36
+                    ml-24 mr-24
+
+                     min-w-[24rem]
+                     
+                     flex flex-row gap-4 flex-wrap justify-center items-center'>
+                    <iframe frameBorder="0" src="https://itch.io/embed/2152852?dark=true" width="552" height="167"><a href="https://blue-peanuts.itch.io/goldgobblers">Gold Gobblers (Jam+) by Blue Peanuts, Xilurus</a></iframe>
+                        <iframe frameBorder="0" src="https://itch.io/embed/2152852?dark=true" width="552" height="167"><a href="https://blue-peanuts.itch.io/goldgobblers">Gold Gobblers (Jam+) by Blue Peanuts, Xilurus</a></iframe>
+                        <iframe frameBorder="0" src="https://itch.io/embed/2152852?dark=true" width="552" height="167"><a href="https://blue-peanuts.itch.io/goldgobblers">Gold Gobblers (Jam+) by Blue Peanuts, Xilurus</a></iframe>
+                        <iframe frameBorder="0" src="https://itch.io/embed/2152852?dark=true" width="552" height="167"><a href="https://blue-peanuts.itch.io/goldgobblers">Gold Gobblers (Jam+) by Blue Peanuts, Xilurus</a></iframe>
                     </div>
-                </ScrollAnimation>
+                </div></div></div>
             </div>
         </>
     )
