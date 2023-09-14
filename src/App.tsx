@@ -15,14 +15,50 @@ function App() {
             </div>
             <div className=' h-[110vh]'></div>
             <Section bgColor='bg-red-500' textColor='text-red-500' borderColor='border-red-500' name='VIDEO GAMES'>
-                <div className='bg-white h-fit  gap-1 justify-center items-center pt-10 pb-10 flex flex-row flex-wrap'>
-                    {
-                        [...Array(10)].map((_, i) => {
-                            return <div key={i} className='bg-black w-96 h-fit flex justify-center'>
-                                <div className='bg-red-50 w-11/12 h-96'></div>
-                            </div>
-                        })
-                    }
+                <div className='h-fit  gap-10 justify-center items-start pt-10 pb-10 flex flex-row flex-wrap'>
+                    <GameCard
+                        name='Gold Gobblers'
+                        img='https://img.itch.zone/aW1nLzEyODM2MzQ1LnBuZw==/180x143%23c/AZ1sD8.png'
+                        animateOrder={0}
+                        lines={[
+                            'Real-time party-based parrying game.',
+                            'Ranked #528 on The GMTK Jam 2023.',
+                            'Worked on design, programming, music, sound effects, particle effects.']} />
+
+                    <GameCard
+                        name='Bibo'
+                        img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
+                        animateOrder={0}
+                        lines={[
+                            'Roguelike hack-and-slash with a robot companion.',
+                            'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
+                            'Worked on design, programming, music, sound effectts, particle effects.']} />
+                    <GameCard
+                        name='Bibo'
+                        img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
+                        animateOrder={0}
+                        lines={[
+                            'Roguelike hack-and-slash with a robot companion.',
+                            'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
+                            'Worked on design, programming, music, sound effectts, particle effects.']} />
+                    <GameCard
+                        name='Bibo'
+                        img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
+                        animateOrder={0}
+                        lines={[
+                            'Roguelike hack-and-slash with a robot companion.',
+                            'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
+                            'Worked on design, programming, music, sound effectts, particle effects.']} />
+                    <GameCard
+                        name='Bibo'
+                        img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
+                        animateOrder={0}
+                        lines={[
+                            'Roguelike hack-and-slash with a robot companion.',
+                            'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
+                            'Worked on design, programming, music, sound effectts, particle effects.']} />
+
+
                 </div>
                 {/*
                 <div className='
@@ -46,38 +82,36 @@ function App() {
 
 
 function GameCard(props: { name: string, img: string, lines: string[], animateOrder: number }) {
-    return <ScrollAnimation initialClass='opacity-none' animationClass={`blur-reveal-${props.animateOrder}`} className={`
-        flex flex-col sm:flex-row gap-8 justify-center items-center w-fit lg:pl-10 pb-5 
-        
+    return <div className='w-fit flex justify-center items-start'>
+        <ScrollAnimation initialClass='opacity-none' animationClass={`blur-reveal-${props.animateOrder}`} className={`
+        flex gap-8 justify-center items-center lg:pl-10 pb-5 
+         max-w-[90vw] flex-col 2xl:flex-row flax-wrap
     `}>
-        <div className='flex flex-col justify-center items-center'>
-            <img src={props.img} className=' max-h-48 rounded-xl' />
+            <img src={props.img} className=' max-w-[50vw] w-64 rounded-xl' />
+            <div className='w-64 ml-0 flex flex-col justify-between items-center sm:items-start'>
+                <span className=' text-white self-stretch'>
+                    <div className=' flex flex-row items-baseline justify-between'>
 
-            <div className='w-full'>
-                <button className='w-full block sm:hidden hover:bg-red-500 rounded-lg mt-2 font-bold border-4 border-red-500 hover:text-slate-950 text-red-500'> Play on Itch.io </button>
+                        <p className=' text-md sm:text-xl font-bold pb-2'>
+                            {props.name}
+                        </p>
+                        <div>
+                            <button className='hover:bg-red-500 rounded-lg pl-2 pr-2 mt-2 font-bold border-red-500 hover:text-slate-950 text-red-500  sm:ml-0 hover:pl-4 hover:pr-4 transition-all'> Play</button>
+                        </div>
+                    </div>
+                    <ul className=' text-xs sm:text-sm list-disc pl-5'>
+
+                        {
+                            props.lines.map((line, i) => {
+                                return <li key={i}>
+                                    {line}
+                                </li>
+                            })
+                        }
+                    </ul>
+                </span>
             </div>
-        </div>
-        <div className=' ml-0 w-[80vw] sm:w-64 sm:ml-0 flex flex-col justify-between items-center sm:items-start'>
-            <span className=' text-white self-stretch'>
-                <p className=' text-xl font-bold pb-2'>
-                    {props.name}
-                </p>
-                <ul className=' text-sm list-disc pl-5'>
-
-                    {
-                        props.lines.map((line, i) => {
-                            return <li key={i}>
-                                {line}
-                            </li>
-                        })
-                    }
-                </ul>
-                <div>
-                    <button className=' hidden sm:block hover:bg-red-500 rounded-lg pl-2 pr-2 mt-2 font-bold border-4 border-red-500 hover:text-slate-950 text-red-500 ml-4 sm:ml-0 hover:pl-4 hover:pr-4 transition-all'> Play on Itch.io </button>
-                </div>
-            </span>
-        </div>
-    </ScrollAnimation>
+        </ScrollAnimation>                    </div>
 }
 
 export default App
