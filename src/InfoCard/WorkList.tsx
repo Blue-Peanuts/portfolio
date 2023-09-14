@@ -6,12 +6,16 @@ import { default as AppsIcon } from "../assets/appsandtools.svg";
 import { default as MusicIcon } from "../assets/music.svg";
 import { default as IllustrationsIcon } from "../assets/illustrations.svg";
 
-import { useState } from "react";
+import { SectionRefsContext } from "../App";
+
+import { useState, useContext } from "react";
 
 import WorkButton from "./WorkButton";
 
 function WorkList() {
     const [hoverCount, setHoverCount] = useState(0);
+
+    const sectionRefs = useContext(SectionRefsContext)
 
     function hoverIncrementCallback() {
         setHoverCount(prevHoverCount => prevHoverCount + 1);
@@ -38,6 +42,7 @@ function WorkList() {
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={GamesIcon}
                 animationBuffer={3}
+                sectionRef= {sectionRefs.games}
             />
             <WorkButton text='Apps and Tools' color='border-emerald-500 text-emerald-100 hover:bg-emerald-500'
                 oneIsHovered={hoverCount > 0}
@@ -45,6 +50,7 @@ function WorkList() {
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={AppsIcon}
                 animationBuffer={4}
+                sectionRef= {sectionRefs.apps}
             />
             <WorkButton text='Music' color='border-indigo-500 text-indigo-100 hover:bg-indigo-500'
                 oneIsHovered={hoverCount > 0}
@@ -52,6 +58,7 @@ function WorkList() {
                 hoverDecrementCallback={hoverDecrementCallback}
                 svg={MusicIcon}
                 animationBuffer={5}
+                sectionRef= {sectionRefs.music}
             />
             <WorkButton text='Illustrations' color='border-fuchsia-500 text-fuchsia-100 hover:bg-fuchsia-500'
                 oneIsHovered={hoverCount > 0}
@@ -59,6 +66,7 @@ function WorkList() {
                 hoverDecrementCallback={hoverDecrementCallback} 
                 svg={IllustrationsIcon} 
                 animationBuffer={6} 
+                sectionRef= {sectionRefs.illustration}
             />
         </div>
     </div>
