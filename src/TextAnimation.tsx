@@ -8,7 +8,6 @@ function TextAnimation(props: {texts: string[], secondsPerFrame: number})
     useEffect(() => {
         let i = 0;
         const interval = setInterval(() => {
-            console.log('interval');
             i = (i + 1) % props.texts.length;
             setText(props.texts[i]);
         }, props.secondsPerFrame * 1000);
