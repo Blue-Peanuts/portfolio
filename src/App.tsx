@@ -9,6 +9,7 @@ import GamesSection from './GamesSection/GamesSection.tsx'
 import AppsSection from './AppsSection/AppsSection.tsx'
 import MusicSection from './MusicSection/MusicSection.tsx'
 import IllustrationSection from './IllustrationSection/IllustrationSection.tsx'
+import NavBar from './NavBar.tsx'
 
 interface NavRefs {
     games?: React.RefObject<HTMLDivElement>,
@@ -18,11 +19,11 @@ interface NavRefs {
 }
 
 
-export const SectionRefsContext = React.createContext<NavRefs>({});
+export const NavRefsContext = React.createContext<NavRefs>({});
 
 function App() {
 
-    const infoRef = React.useRef<HTMLDivElement>(null);
+    const navRefs = React.useRef<HTMLDivElement>(null);
     const [infoIsInView, setInfoIsInView] = React.useState(false);
 
     React.useEffect(() => {
@@ -35,10 +36,10 @@ function App() {
             }
         );
 
-        if (infoRef.current) {
-            observer.observe(infoRef.current);
+        if (navRefs.current) {
+            observer.observe(navRefs.current);
         }
-    }, [infoRef]);
+    }, [navRefs]);
 
 
     const gamesSectionRef = React.useRef<HTMLDivElement>(null);
@@ -47,32 +48,32 @@ function App() {
     const illustrationSectionRef = React.useRef<HTMLDivElement>(null);
 
     return (
-        <SectionRefsContext.Provider value={{games: gamesSectionRef, apps: appsSectionRef, music: musicSectionRef, illustration: illustrationSectionRef}}>
+        <NavRefsContext.Provider value={{games: gamesSectionRef, apps: appsSectionRef, music: musicSectionRef, illustration: illustrationSectionRef}}>
             
-
+                <NavBar infoCardVisible={infoIsInView}/>
 
             <Background />
             <div className=' pt-0 xl:pt-16 2xl:pt-24'></div>
-            <div className=' text-white scale-75 sm:scale-100' ref={infoRef}>
+            <div className=' text-white scale-75 sm:scale-100' ref={navRefs}>
                 <InfoCard/>
             </div>
-            <div className=' h-[110vh]'></div>
+            <div className=' h-[70vh]'></div>
             <div ref={gamesSectionRef}>
                 <GamesSection />
             </div>
-            <div className=' h-[110vh]'></div>
+            <div className=' h-[70vh]'></div>
             <div ref={appsSectionRef}>
                 <AppsSection />
             </div>
-            <div className=' h-[110vh]'></div>
+            <div className=' h-[70vh]'></div>
             <div ref={musicSectionRef}>
                 <MusicSection />
             </div>
-            <div className=' h-[110vh]'></div>
+            <div className=' h-[70vh]'></div>
             <div ref={illustrationSectionRef}>
                 <IllustrationSection />
             </div>
-        </SectionRefsContext.Provider>
+        </NavRefsContext.Provider>
     )
 }
 
