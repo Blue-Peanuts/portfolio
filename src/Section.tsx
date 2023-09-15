@@ -21,9 +21,7 @@ function Section(props: { children: React.ReactNode, name: string, bgColor: stri
                     <div className=' border-t-slate-800 border-b-slate-800
                         border-b-4  border-t-4 w-full
                         
-                        lg:-mt-16 
-
-                        lg:ml-48 lg:mr-36
+                        lg:-mt-16 lg:ml-48 lg:mr-36
                         ml-12 mr-12
                         
 
