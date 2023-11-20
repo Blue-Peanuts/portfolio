@@ -2,9 +2,10 @@ import Section from "../Section";
 import AppCard from "./AppCard";
 import BubbleTilesCard from "../assets/bubble_tiles_card.png";
 import MonobehaviourNameMatcher from "../assets/monobehaviour_name_matcher.png"
+import AppSvg from "../assets/appsandtools.svg";
 
 function AppsSection() {
-    return <Section bgColor='bg-emerald-500' textColor='text-emerald-500' borderColor='border-emerald-500' name='APPS AND TOOLS'>
+    return <Section bgColor='bg-emerald-500' textColor='text-emerald-500' borderColor='border-emerald-500' name='APPS AND TOOLS' svg={AppSvg}>
         <div className='h-fit  gap-10 justify-center items-start pt-10 pb-10 flex flex-row flex-wrap'>
             <AppCard
                 name='React Bubble Tiles'

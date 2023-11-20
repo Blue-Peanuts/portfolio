@@ -1,9 +1,10 @@
 import Section from "../Section"
 import GameCard from "./GameCard"
+import GameSvg from "../assets/games.svg"
 
 function GamesSection() {
 
-    return <Section bgColor='bg-red-500' textColor='text-red-500' borderColor='border-red-500' name='VIDEO GAMES'>
+    return <Section bgColor='bg-red-500' textColor='text-red-500' borderColor='border-red-500' name='VIDEO GAMES' svg={GameSvg}>
         <div className='h-fit  gap-10 justify-center items-start pt-10 pb-10 flex flex-row flex-wrap'>
             <GameCard
                 name='Gold Gobblers'

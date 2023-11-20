@@ -2,7 +2,7 @@ import React from 'react';
 import ScrollAnimation from './ScrollAnimation/ScrollAnimation';
 import './ScrollAnimation/ScrollAnimation.scss'
 
-function Section(props: { children: React.ReactNode, name: string, bgColor: string, textColor: string, borderColor: string }) {
+function Section(props: { children: React.ReactNode, name: string, bgColor: string, textColor: string, borderColor: string, svg: string}) {
     return <div>
         <div className='flex justify-center items-center'>
             <div className=' max-w-[1800px] w-screen'>
@@ -12,6 +12,7 @@ function Section(props: { children: React.ReactNode, name: string, bgColor: stri
                 lg:h-28 -rotate-[5deg]
                 h-14 
                 `}>
+                    <img src={props.svg} className=' h-full w-full p-2'></img>
                     </ScrollAnimation>
                     <ScrollAnimation initialClass='opacity-none' animationClass='blur-reveal-4' className={`${props.textColor} font-extrabold text-2xl lg:text-3xl mt-3 lg:mt-6`}>
                         {props.name}
