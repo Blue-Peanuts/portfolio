@@ -16,6 +16,7 @@ interface NavRefs {
     apps?: React.RefObject<HTMLDivElement>,
     music?: React.RefObject<HTMLDivElement>,
     illustration?: React.RefObject<HTMLDivElement>,
+    contacts?: React.RefObject<HTMLDivElement>
 }
 
 
@@ -46,16 +47,20 @@ function App() {
     const appsSectionRef = React.useRef<HTMLDivElement>(null);
     const musicSectionRef = React.useRef<HTMLDivElement>(null);
     const illustrationSectionRef = React.useRef<HTMLDivElement>(null);
+    const contactsSectionRef = React.useRef<HTMLDivElement>(null);
 
     return (
-        <NavRefsContext.Provider value={{games: gamesSectionRef, apps: appsSectionRef, music: musicSectionRef, illustration: illustrationSectionRef}}>
-            
-                <NavBar infoCardVisible={infoIsInView}/>
+        <NavRefsContext.Provider value={{
+            games: gamesSectionRef, apps: appsSectionRef,
+            music: musicSectionRef, illustration: illustrationSectionRef, contacts: contactsSectionRef
+        }}>
+
+            <NavBar infoCardVisible={infoIsInView} />
 
             <Background />
             <div className=' pt-0 xl:pt-16 2xl:pt-24'></div>
             <div className=' text-white scale-75 sm:scale-100' ref={navRefs}>
-                <InfoCard/>
+                <InfoCard />
             </div>
             <div className=' h-[30vh]'></div>
             <div ref={gamesSectionRef}>
@@ -73,6 +78,14 @@ function App() {
             <div ref={illustrationSectionRef}>
                 <IllustrationSection />
             </div>
+            <div ref={contactsSectionRef} className=' mt-96 mb-96 flex flex-col sm:flex-row justify-center gap-10 text-xs sm:text-lg text-slate-500'>
+                <button className=' hover:text-white'>GitHub</button>
+                <button className=' hover:text-white'>Itch.io</button>
+                <button className=' hover:text-white'>NewGrounds</button>
+                <button className=' hover:text-white'>Discord</button>
+                <button className=' hover:text-white'>Email</button>
+            </div>
+            <br></br>
         </NavRefsContext.Provider>
     )
 }

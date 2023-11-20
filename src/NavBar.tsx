@@ -15,7 +15,7 @@ function NavBar(props: { infoCardVisible: boolean }) {
             <NavButton navRef={navRefs.illustration} name='Illustrations' />
         </span>
         <span className={`${props.infoCardVisible ? 'text-sm xl:text-2xl' : ''} transition-all`}>
-        <NavButton navRef={navRefs.illustration} name='Contacts and Links' />
+        <NavButton navRef={navRefs.contacts} name='Contacts and Links' />
         </span>
     </div>
 }

@@ -6,7 +6,7 @@ import WorkList from "./WorkList";
 
 function InfoCard() {
     return (
-        <div className=' w-screen flex justify-center items-start'>
+        <div className=' w-screen h-screen flex justify-center items-start'>
             <div className=' w-fit flex justify-between pt-20
             flex-col gap-12 items-center  
             xl:flex-row xl:gap-32 xl:items-start
