@@ -11,9 +11,10 @@ function GamesSection() {
                 animateOrder={0}
                 lines={[
                     'Real-time party-based parrying game.',
-                    'Ranked #528 on The GMTK Jam 2023.',
-                    'Worked on design, programming, music, sound effects, particle effects.']} />
-
+                    'Ranked #528th (out of 6799 entries), in The GTMK Jam 2023',
+                    '2 people team.',
+                    'Worked on design, programming, music, sound effects, particle effects.']}
+                link="https://blue-peanuts.itch.io/goldgobblers" />
             <GameCard
                 name='Bibo'
                 img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
@@ -21,25 +22,27 @@ function GamesSection() {
                 lines={[
                     'Roguelike hack-and-slash with a robot companion.',
                     'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
-                    'Worked on design, programming, music, sound effectts, particle effects.']} />
+                    '2 people team.',
+                    'Worked on design, programming, music, sound effects, particle effects.']}
+                link="https://blue-peanuts.itch.io/goldgobblers" />
             <GameCard
-                name='Bibo'
-                img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
+                name='Gun Reroll'
+                img='https://img.itch.zone/aW1nLzk1NTQzODEucG5n/315x250%23c/J2f04N.png'
+                animateOrder={0}
+                lines={[
+                    'Action packed shooter game with boss fights.',
+                    'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
+                    'Solo project.']}
+                link="https://blue-peanuts.itch.io/goldgobblers" />
+            <GameCard
+                name='Desynced Katana'
+                img='https://img.itch.zone/aW1nLzkzODA2ODMucG5n/315x250%23c/s05YYj.png'
                 animateOrder={0}
                 lines={[
                     'Roguelike hack-and-slash with a robot companion.',
-                    'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
-                    'Worked on design, programming, music, sound effectts, particle effects.']} />
-            <GameCard
-                name='Bibo'
-                img='https://img.itch.zone/aW1nLzk3OTA1MjIucG5n/315x250%23c/rGPfBG.png'
-                animateOrder={0}
-                lines={[
-                    'Roguelike hack-and-slash with a robot companion.',
-                    'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
-                    'Worked on design, programming, music, sound effectts, particle effects.']} />
-
-
+                    'Ranked #712nd (out of 6076 entries), in The GTMK Jam 2022',
+                    'Solo project.']}
+                link="https://blue-peanuts.itch.io/goldgobblers"/>
         </div>
         {/*
     <div className='
