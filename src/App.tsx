@@ -57,19 +57,19 @@ function App() {
             <div className=' text-white scale-75 sm:scale-100' ref={navRefs}>
                 <InfoCard/>
             </div>
-            <div className=' h-[70vh]'></div>
+            <div className=' h-[30vh]'></div>
             <div ref={gamesSectionRef}>
                 <GamesSection />
             </div>
-            <div className=' h-[70vh]'></div>
+            <div className=' h-[20vh]'></div>
             <div ref={appsSectionRef}>
                 <AppsSection />
             </div>
-            <div className=' h-[70vh]'></div>
+            <div className=' h-[20vh]'></div>
             <div ref={musicSectionRef}>
                 <MusicSection />
             </div>
-            <div className=' h-[70vh]'></div>
+            <div className=' h-[20vh]'></div>
             <div ref={illustrationSectionRef}>
                 <IllustrationSection />
             </div>

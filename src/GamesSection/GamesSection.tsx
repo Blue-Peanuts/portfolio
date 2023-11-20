@@ -12,7 +12,7 @@ function GamesSection() {
                 lines={[
                     'Real-time party-based parrying game.',
                     'Ranked #528th (out of 6799 entries), in The GTMK Jam 2023',
-                    '2 people team.',
+                    'Two-person team.',
                     'Worked on design, programming, music, sound effects, particle effects.']}
                 link="https://blue-peanuts.itch.io/goldgobblers" />
             <GameCard
@@ -22,7 +22,7 @@ function GamesSection() {
                 lines={[
                     'Roguelike hack-and-slash with a robot companion.',
                     'Ranked #3rd in visuals and #10th in fun, (out of 996 entries), in Wowie Jam 4.0.',
-                    '2 people team.',
+                    'Two-person team.',
                     'Worked on design, programming, music, sound effects, particle effects.']}
                 link="https://blue-peanuts.itch.io/goldgobblers" />
             <GameCard
